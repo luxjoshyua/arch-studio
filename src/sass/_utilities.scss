@@ -6,14 +6,22 @@
   max-width: $max-page-width;
 }
 
+@mixin absoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .chapter {
   .inner {
+    position: relative;
     @include centreContent();
   }
 }
 
 .btn {
-  background: $very-dark-blue 0% 0% no-repeat padding-box;
+  background: $black 0% 0% no-repeat padding-box;
   span {
     text-align: right;
     color: $white;
@@ -24,4 +32,157 @@
     background-color: $dark-grey;
     transition: background-color 0.25s ease-in-out;
   }
+}
+
+@mixin centreContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.reader-only {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+.grid {
+  opacity: 0.8;
+  // display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  z-index: 10000;
+  pointer-events: none;
+  .columns {
+    max-width: $max-page-width;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    .column {
+      display: flex;
+      width: nth($cols, 12);
+      margin: 0 12px;
+      background-color: rgba(180, 242, 239, 0.5);
+      height: 100vh;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.inner {
+  max-width: $max-width;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include breakpoint(desk-sm) {
+    max-width: 768px;
+  }
+  @include breakpoint(mob-sm) {
+    max-width: 300px;
+  }
+}
+.width {
+  &-100 {
+    width: 100%;
+  }
+}
+.cols {
+  display: flex;
+  flex-direction: row !important;
+  align-items: flex-start;
+
+  @include breakpoint(desk-sm) {
+    width: 100% !important;
+    padding: 0 50px;
+    flex-direction: column !important;
+  }
+  @include breakpoint(mob-lg) {
+    padding: 0;
+  }
+  @include breakpoint(mob-sm) {
+    padding: 0 5px;
+  }
+}
+.cols > .cols {
+  @include breakpoint(desk-sm) {
+    padding: 0;
+  }
+}
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: calc(#{$max-width} / 12 * #{$i});
+  }
+}
+@for $i from 1 through 12 {
+  .col-spacer-#{$i} {
+    padding-left: calc(#{$max-width-true} / 12 * #{$i});
+  }
+}
+
+.col {
+  padding: 0;
+}
+
+// .flex {
+//   &-col {
+//     flex-direction: column !important;
+//   }
+//   &-align-top {
+//     align-items: flex-start !important;
+//   }
+//   &-align-end {
+//     align-items: flex-end !important;
+//   }
+//   &-align-center {
+//     align-items: center !important;
+//   }
+//   &-align-stretch {
+//     align-items: stretch !important;
+//   }
+//   &-align-center {
+//     align-items: center !important;
+//   }
+//   &-1 {
+//     flex: 1;
+//   }
+//   &-justify-center {
+//     justify-content: center !important;
+//   }
+//   &-justify-around {
+//     justify-content: space-around !important;
+//   }
+// }
+.width-100 {
+  width: 100%;
+}
+.height-100 {
+  height: 100%;
+}
+.full-width-align {
+  margin-left: calc((100% - #{$max-width-true}) / 2);
+  @include breakpoint(desk-sm) {
+    margin-left: 0;
+  }
+}
+.chapter {
+  position: relative;
 }
