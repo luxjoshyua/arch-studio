@@ -1,7 +1,9 @@
-# easy-build-template
+# Frontend Mentors Arch Studio Challenge
+Challenge available <a href="https://www.frontendmentor.io/challenges/arch-studio-multipage-website-wNIbOFYR6" target="_blank">here.</a>
 
 # Getting started
-1. git clone
+
+1. \$ git clone <source>
 2. \$ nvm use
 3. \$ npm i
 
