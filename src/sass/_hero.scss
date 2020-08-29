@@ -1,0 +1,40 @@
+.hero {
+  .inner {
+    .project {
+      width: 100%;
+      height: 720px;
+      background-color: rgba(187, 255, 1, 0.548);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      .copy-outer {
+        height: 100%;
+        width: 100%;
+        .heading-medium {
+          color: $white;
+          padding-bottom: 20px;
+        }
+        .copy {
+          padding-bottom: 70px;
+        }
+      }
+      &-one {
+        background-image: url("../assets/images/home/desktop/image-hero-paramour.jpg");
+      }
+      &-two {
+        background-color: lightcoral;
+      }
+      &-three {
+        background-color: blue;
+      }
+      &-four {
+        background-color: springgreen;
+      }
+    }
+
+    .project-one {
+    }
+    .project-navigation {
+    }
+  }
+}

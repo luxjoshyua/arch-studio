@@ -1,4 +1,27 @@
-.heading {
-    font-size: 20vh;
-    color: red;
+@mixin centreContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: $max-page-width;
+}
+
+.chapter {
+  .inner {
+    @include centreContent();
+  }
+}
+
+.btn {
+  background: $very-dark-blue 0% 0% no-repeat padding-box;
+  span {
+    text-align: right;
+    color: $white;
+    padding: 20px 60px;
+    line-height: 4em;
+  }
+  &:hover {
+    background-color: $dark-grey;
+    transition: background-color 0.25s ease-in-out;
+  }
 }

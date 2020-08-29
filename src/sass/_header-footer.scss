@@ -1,0 +1,48 @@
+.header {
+  max-width: $max-page-width;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 56px;
+  .page-indicator {
+    position: absolute;
+    top: 120px;
+    left: -20%;
+    transform: rotate(90deg);
+    .line {
+      width: 104px;
+      height: 1px;
+      background-color: $light-grey;
+      display: inline-block;
+      position: relative;
+      top: 10px;
+    }
+    .copy {
+      text-transform: uppercase;
+      color: $light-grey;
+      text-align: left;
+      letter-spacing: 15px;
+      padding-left: 60px;
+    }
+  }
+  nav {
+    .inner {
+      max-width: 620px;
+      padding-top: 56px;
+      .logo-outer {
+        padding-right: 95px;
+      }
+      .links-outer {
+        ul {
+          list-style-type: none;
+          li {
+            padding-right: 70px;
+            a {
+              color: $medium-grey;
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
+}
