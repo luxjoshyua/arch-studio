@@ -22,11 +22,15 @@
 
 .btn {
   background: $black 0% 0% no-repeat padding-box;
+  padding: 0;
   span {
     text-align: right;
     color: $white;
-    padding: 20px 60px;
+    padding: 20px 40px;
     line-height: 4em;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 3em;
   }
   &:hover {
     background-color: $dark-grey;

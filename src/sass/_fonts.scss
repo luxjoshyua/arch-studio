@@ -5,6 +5,7 @@
   font-size: 20rem;
   line-height: 1em;
   letter-spacing: -0.5px;
+  color: $very-light-grey;
 }
 
 .heading-medium {
@@ -28,4 +29,8 @@
   color: $very-dark-blue;
   font-size: 1.8rem;
   line-height: 1.4em;
+}
+
+p.copy {
+  padding-bottom: 20px;
 }
