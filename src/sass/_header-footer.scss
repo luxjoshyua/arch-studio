@@ -47,3 +47,36 @@
     }
   }
 }
+
+.footer {
+  padding-right: 110px;
+  footer {
+    .inner {
+      background: $very-light-grey 0% 0% no-repeat padding-box;
+      max-width: 984px;
+      min-height: 200px;
+      .logo-box {
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 200px;
+        background-color: $black;
+        img {
+          @include absoluteCenter;
+        }
+      }
+      .footer-links {
+        .inner {
+          .link {
+            padding-right: 52px;
+            span {
+            }
+          }
+        }
+      }
+      .btn-outer {
+        right: -120px;
+      }
+    }
+  }
+}

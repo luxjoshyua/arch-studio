@@ -23,14 +23,29 @@
 .btn {
   background: $black 0% 0% no-repeat padding-box;
   padding: 0;
+  min-height: 72px;
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    background: url("../assets/images/icons/icon-arrow.svg") no-repeat center
+      center;
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    top: 25px;
+  }
   span {
     text-align: right;
     color: $white;
-    padding: 20px 40px;
+    padding: 20px 60px 20px 40px;
     line-height: 4em;
     font-weight: 700;
     font-size: 1.5rem;
     line-height: 3em;
+    position: relative;
+    top: 11px;
   }
   &:hover {
     background-color: $dark-grey;
@@ -54,6 +69,10 @@
   overflow: hidden;
   padding: 0;
   position: absolute;
+}
+
+.margin-bottom-dsk {
+  margin-bottom: 200px;
 }
 
 .grid {
