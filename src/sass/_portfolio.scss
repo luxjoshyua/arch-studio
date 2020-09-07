@@ -1,0 +1,82 @@
+.portfolio {
+  margin-bottom: 160px;
+  .inner {
+    max-width: $max-page-width;
+    .cols {
+      flex-flow: wrap;
+      .portfolio-item {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        min-height: 560px;
+        max-width: 350px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        &::before {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: transparent
+            linear-gradient(180deg, #00000000 0%, #0000007f 100%) 0% 0%
+            no-repeat padding-box;
+        }
+        &.margin-right-0 {
+          margin-right: 0;
+        }
+        .content-outer {
+          padding: 30px 20px;
+          position: absolute;
+          top: 80%;
+          left: 20px;
+          .project,
+          .date {
+            color: $white;
+          }
+          .date {
+            font-weight: 300;
+          }
+        }
+        &-one {
+          background-image: url("../assets/images/portfolio/desktop/image-seraph.jpg");
+        }
+        &-two {
+          background-image: url("../assets/images/portfolio/desktop/image-eebox.jpg");
+        }
+        &-three {
+          background-image: url("../assets/images/portfolio/desktop/image-federal.jpg");
+        }
+        &-four {
+          background-image: url("../assets/images/portfolio/desktop/image-del-sol.jpg");
+        }
+        &-five {
+          background-image: url("../assets/images/portfolio/desktop/image-prototype.jpg");
+        }
+        &-six {
+          background-image: url("../assets/images/portfolio/desktop/image-228b.jpg");
+        }
+        &-seven {
+          background-image: url("../assets/images/portfolio/desktop/image-edelweiss.jpg");
+        }
+        &-eight {
+          background-image: url("../assets/images/portfolio/desktop/image-netcry.jpg");
+        }
+        &-nine {
+          background-image: url("../assets/images/portfolio/desktop/image-hypers.jpg");
+        }
+        &-ten {
+          background-image: url("../assets/images/portfolio/desktop/image-sxiv.jpg");
+        }
+        &-eleven {
+          background-image: url("../assets/images/portfolio/desktop/image-trinity.jpg");
+        }
+        &-twelve {
+          background-image: url("../assets/images/portfolio/desktop/image-paramour.jpg");
+        }
+      }
+    }
+  }
+}

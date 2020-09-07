@@ -1,5 +1,4 @@
 .chapter1 {
-  padding-bottom: 200px;
   .inner {
     .cols {
       max-width: 100%;
@@ -50,10 +49,6 @@
           color: $white;
           margin-bottom: 34px;
         }
-        .btn-outer {
-          .btn {
-          }
-        }
       }
     }
   }
@@ -98,8 +93,6 @@
           padding: 30px 20px;
           .number-outer {
             text-align: right;
-            .number {
-            }
           }
           .copy-outer {
             padding-top: 240px;
@@ -112,6 +105,7 @@
             }
             .link {
               color: $white;
+              font-weight: 300;
             }
           }
         }

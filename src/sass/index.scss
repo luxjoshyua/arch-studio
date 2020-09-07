@@ -6,6 +6,7 @@
 @import "sections";
 @import "hero";
 @import "header-footer";
+@import "portfolio";
 
 html {
   font-size: 62.5%;
@@ -38,6 +39,7 @@ a {
     cursor: pointer;
     color: inherit;
     text-decoration: none;
+    color: $black !important;
   }
 }
 
