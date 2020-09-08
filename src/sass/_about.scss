@@ -1,0 +1,66 @@
+.hero-about {
+  .inner {
+    min-height: 720px;
+    .img-outer {
+      background: url("../assets/images/about/desktop/image-hero.jpg") no-repeat
+        center center;
+      min-height: 720px;
+      width: 635px;
+      max-width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .copy-outer {
+      position: absolute;
+      background-color: $white;
+      height: 500px;
+      width: 740px;
+      right: -120px;
+      top: 230px;
+      .heading-large {
+        position: relative;
+        top: -80px;
+        left: -60px;
+      }
+      .copy {
+        max-width: 446px;
+        margin-left: 182px;
+        &.chapter-divider {
+          &::before {
+            top: -60px;
+          }
+        }
+        .heading-small {
+          padding-bottom: 50px;
+        }
+      }
+    }
+  }
+}
+
+.chapter-heritage {
+  .inner {
+    .img-outer {
+      background: url("../assets/images/about/desktop/image-heritage.jpg")
+        no-repeat center center;
+      min-height: 570px;
+      width: 540px;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    .cols {
+      .col-5 {
+        padding-top: 120px;
+        padding-right: 10px;
+        .heading-small {
+          padding-bottom: 50px;
+        }
+      }
+    }
+  }
+}
+
+.chapter-leaders {
+}

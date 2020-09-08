@@ -8,18 +8,6 @@
       background-position: center center;
       background-size: cover;
       position: relative;
-      &::before {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: transparent
-          linear-gradient(180deg, #00000000 0%, #0000007f 100%) 0% 0% no-repeat
-          padding-box;
-      }
       .col-5 {
         margin-left: 190px;
         .copy-outer {
