@@ -55,6 +55,10 @@ module.exports = {
       filename: "./about.html",
     }),
     new HtmlWebPackPlugin({
+      template: "src/contact.html",
+      filename: "./contact.html",
+    }),
+    new HtmlWebPackPlugin({
       template: "src/portfolio.html",
       filename: "./portfolio.html",
     }),

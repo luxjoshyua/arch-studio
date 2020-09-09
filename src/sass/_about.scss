@@ -1,9 +1,9 @@
-.hero-about {
+.hero-child-page {
   .inner {
     min-height: 720px;
     .img-outer {
-      background: url("../assets/images/about/desktop/image-hero.jpg") no-repeat
-        center center;
+      background-repeat: no-repeat;
+      background-position: center center;
       min-height: 720px;
       width: 635px;
       max-width: 100%;
@@ -35,6 +35,14 @@
           padding-bottom: 50px;
         }
       }
+    }
+  }
+}
+
+.hero-about {
+  .inner {
+    .img-outer {
+      background-image: url("../assets/images/about/desktop/image-hero.jpg");
     }
   }
 }
