@@ -56,3 +56,51 @@
     }
   }
 }
+
+.contact-form {
+  .inner {
+    .col-3 {
+      margin-right: 60px;
+    }
+    .col-8 {
+      form {
+        max-width: 660px;
+        input {
+          margin-bottom: 20px;
+          border-top: none;
+          border-left: none;
+          border-right: none;
+          border-bottom: 2px solid $black;
+          padding-bottom: 10px;
+          outline: none;
+          &::placeholder {
+            font-size: 2rem;
+            color: $light-grey;
+            padding-left: 20px;
+          }
+        }
+        .error {
+          margin-bottom: 20px;
+          padding-left: 20px;
+          font-style: italic;
+          color: red;
+          display: none;
+        }
+
+        .submit {
+          position: absolute;
+          bottom: -40px;
+          right: 0;
+          background-color: $black;
+          width: 60px;
+          height: 60px;
+          .arrow {
+          }
+        }
+        .form-error {
+          color: red;
+        }
+      }
+    }
+  }
+}
