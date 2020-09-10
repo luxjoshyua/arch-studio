@@ -1,12 +1,24 @@
 const { map } = require("jquery");
-import apiKey from "./config";
+
+import apiKey from "../../../apikey/config";
+import customPin from "../../assets/images/icons/custom_pin.png";
 
 // load the Maps JavaScript API
 loadMapsJSAPI();
 
 function runApp() {
-  console.log("Maps JS API loaded");
-  const map = displayMap();
+  //   console.log("Maps JS API loaded");
+  const mapOptionsInitial = {
+    //   Tennessee
+    center: {
+      lat: 36.1915,
+      lng: -86.778686,
+    },
+    zoom: 10,
+  };
+
+  const map = displayMap(mapOptionsInitial);
+  const markers = addMarkers(map);
 }
 
 function loadMapsJSAPI() {
@@ -20,45 +32,54 @@ function loadMapsJSAPI() {
   // add callback directly to the DOM's window object to make it accessible
   // by the maps JavaScript API
   window.runApp = runApp;
-
   // append the script tag to document.head so we load the Maps JavaScript API
   // when the web page is loaded
   document.head.appendChild(script);
 }
 
 // display a map
-function displayMap() {
-  const mapOptions = {
-    //   Sydney
-    center: {
-      lat: -33.8469759,
-      lng: 150.3715249,
-    },
-    zoom: 14,
-  };
-
+function displayMap(coords) {
   const mapDiv = document.getElementById("map");
-  // node (mapDiv) and object (mapOptions)
-  return new google.maps.Map(mapDiv, mapOptions);
+  if (mapDiv) {
+    // node (mapDiv) and object (mapOptions)
+    return new google.maps.Map(mapDiv, coords);
+  }
 }
 
-// on click, interact with the map div,
-// then change the center of the map to match the coordinates in the address e.g. for Chenoweth Drive
-// once that is working, add a reset function to clear the address
-const map1 = document.getElementById("locationOne");
-map1.addEventListener("click", (e) => {
-  e.preventDefault();
-
-  const lat = e.target.attributes[1].nodeValue;
-  const lng = e.target.attributes[2].nodeValue;
-  const mapOptionsOne = {
-    // Chenoweth Drive TN
-    center: {
-      lat: lat,
-      lng: lng,
-    },
-    zoom: 14,
+// add custom markers to the map
+function addMarkers(map) {
+  const locations = {
+    mainOffice: { lat: 35.991923, lng: -86.749979 },
+    secondOffice: { lat: 32.773257, lng: -96.79747 },
   };
+  const markers = [];
+  for (const location in locations) {
+    const markerOptions = {
+      map: map,
+      position: locations[location],
+      icon: customPin,
+    };
+    const marker = new google.maps.Marker(markerOptions);
+    markers.push(marker);
+  }
+  return markers;
+}
 
-  displayMap(mapOptionsOne);
-});
+const locations = document.querySelectorAll(".locations");
+if (locations) {
+  locations.forEach((location) => {
+    location.addEventListener("click", (e) => {
+      e.preventDefault();
+      const lat = parseInt(e.target.attributes["data-latitude"].nodeValue);
+      const lng = parseInt(e.target.attributes["data-longitude"].nodeValue);
+      const mapOptionsTwo = {
+        center: {
+          lat: lat,
+          lng: lng,
+        },
+        zoom: 10,
+      };
+      displayMap(mapOptionsTwo);
+    });
+  });
+}
