@@ -9,7 +9,9 @@ if (form !== null) {
       const element = formInputs[index];
       if (element.value.length === 0) {
         element.classList.add("form-error");
-        element.nextElementSibling.style.display = "block";
+        if (element.nextElementSibling) {
+          element.nextElementSibling.style.display = "block";
+        }
         submitBtn.disabled = true;
       }
       if (element.value.length > 0) {
