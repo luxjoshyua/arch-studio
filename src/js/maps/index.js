@@ -7,9 +7,27 @@ import customPin from "../../assets/images/icons/custom_pin.png";
 loadMapsJSAPI();
 
 function runApp() {
-  //   console.log("Maps JS API loaded");
+  console.log("Maps JS API loaded");
+
+  locations.forEach((location) => {
+    location.addEventListener("click", (e) => {
+      e.preventDefault();
+      const lat = parseInt(e.target.attributes["data-latitude"].nodeValue);
+      const lng = parseInt(e.target.attributes["data-longitude"].nodeValue);
+      const mapOptionsTwo = {
+        center: {
+          lat: lat,
+          lng: lng,
+        },
+        zoom: 6,
+      };
+      const map = displayMap(mapOptionsTwo);
+      const markers = addMarkers(map);
+    });
+  });
+
   const mapOptionsInitial = {
-    //   Tennessee
+    // coords are for near Nashville
     center: {
       lat: 36.1915,
       lng: -86.778686,
@@ -18,13 +36,12 @@ function runApp() {
   };
 
   const map = displayMap(mapOptionsInitial);
-  const markers = addMarkers(map);
+  //   const markers = addMarkers(map);
 }
 
 function loadMapsJSAPI() {
   const googleMapsAPIKey = apiKey;
   const googleMapsAPIURI = `https://maps.googleapis.com/maps/api/js?key=${googleMapsAPIKey}&callback=runApp`;
-
   const script = document.createElement("script");
   script.src = googleMapsAPIURI;
   script.defer = true;
@@ -77,7 +94,7 @@ if (locations) {
           lat: lat,
           lng: lng,
         },
-        zoom: 10,
+        zoom: 6,
       };
       displayMap(mapOptionsTwo);
     });
