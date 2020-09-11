@@ -26,8 +26,4 @@ if (form !== null) {
   form.addEventListener("keydown", (e) => {
     checkForm();
   });
-
-  //   submitBtn.addEventListener("click", (e) => {
-  //     checkForm();
-  //   });
 }

@@ -1,4 +1,3 @@
-const galleryItem = document.querySelectorAll(".nav-item span");
 const projectOne = document.querySelector(".project-one");
 const projectTwo = document.querySelector(".project-two");
 const projectThree = document.querySelector(".project-three");
@@ -7,67 +6,43 @@ const projectFour = document.querySelector(".project-four");
 const projects = document.querySelectorAll(".hero .project");
 const navBtns = document.querySelectorAll(".hero .nav-btn");
 
-const btn1 = document.getElementById("btn1");
-if (btn1 !== null) {
-  btn1.addEventListener("click", (e) => {
-    projects.forEach((project) => {
-      project.classList.add("project-inactive");
-      project.classList.remove("project-active");
-    });
-    navBtns.forEach((btn) => {
-      btn.classList.remove("active");
-    });
-    projectOne.classList.toggle("project-active");
-    projectOne.classList.remove("project-inactive");
-    btn1.classList.add("active");
-  });
-}
+projects[0].classList.add("project-active");
+navBtns[0].classList.add("active");
 
-const btn2 = document.getElementById("btn2");
-if (btn2 !== null) {
-  btn2.addEventListener("click", (e) => {
+navBtns.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    let target = e.target.innerHTML;
     projects.forEach((project) => {
-      project.classList.add("project-inactive");
       project.classList.remove("project-active");
-    });
-    navBtns.forEach((btn) => {
-      btn.classList.remove("active");
-    });
-    projectTwo.classList.toggle("project-active");
-    projectTwo.classList.remove("project-inactive");
-    btn2.classList.add("active");
-  });
-}
+      //   project.classList.add("project-inactive");
 
-const btn3 = document.getElementById("btn3");
-if (btn3 !== null) {
-  btn3.addEventListener("click", (e) => {
-    projects.forEach((project) => {
-      project.classList.add("project-inactive");
-      project.classList.remove("project-active");
-    });
-    navBtns.forEach((btn) => {
-      btn.classList.remove("active");
-    });
-    projectThree.classList.toggle("project-active");
-    projectThree.classList.remove("project-inactive");
-    btn3.classList.add("active");
-  });
-}
+      if (target === "01") {
+        if (project.classList.contains("project-one")) {
+          project.classList.add("project-active");
+          project.classList.remove("project-inactive");
+        }
+      }
 
-const btn4 = document.getElementById("btn4");
+      if (target === "02") {
+        if (project.classList.contains("project-two")) {
+          project.classList.add("project-active");
+          project.classList.remove("project-inactive");
+        }
+      }
 
-if (btn4 !== null) {
-  btn4.addEventListener("click", (e) => {
-    projects.forEach((project) => {
-      project.classList.add("project-inactive");
-      project.classList.remove("project-active");
+      if (target === "03") {
+        if (project.classList.contains("project-three")) {
+          project.classList.add("project-active");
+          project.classList.remove("project-inactive");
+        }
+      }
+
+      if (target === "04") {
+        if (project.classList.contains("project-four")) {
+          project.classList.add("project-active");
+          project.classList.remove("project-inactive");
+        }
+      }
     });
-    navBtns.forEach((btn) => {
-      btn.classList.remove("active");
-    });
-    projectFour.classList.toggle("project-active");
-    projectFour.classList.remove("project-inactive");
-    btn4.classList.add("active");
   });
-}
+});

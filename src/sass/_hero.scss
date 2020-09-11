@@ -8,6 +8,7 @@
       background-position: center center;
       background-size: cover;
       position: relative;
+      display: none;
       .col-5 {
         margin-left: 190px;
         .copy-outer {
@@ -71,7 +72,7 @@
 }
 
 .project-inactive {
-  display: none !important;
+  display: none;
 }
 
 .project-active {
