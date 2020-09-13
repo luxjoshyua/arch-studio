@@ -16,35 +16,30 @@ if (navBtns[0]) {
 navBtns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     let target = e.target.innerHTML;
-    btn.classList.toggle("active");
 
-    // btn.nextElementSibling.classList.remove("active");
+    btn.classList.add("active");
     // btn.previousElementSibling.classList.remove("active");
 
     projects.forEach((project) => {
       project.classList.remove("project-active");
-
       if (target === "01") {
         if (project.classList.contains("project-one")) {
           project.classList.add("project-active");
           project.classList.remove("project-inactive");
         }
       }
-
       if (target === "02") {
         if (project.classList.contains("project-two")) {
           project.classList.add("project-active");
           project.classList.remove("project-inactive");
         }
       }
-
       if (target === "03") {
         if (project.classList.contains("project-three")) {
           project.classList.add("project-active");
           project.classList.remove("project-inactive");
         }
       }
-
       if (target === "04") {
         if (project.classList.contains("project-four")) {
           project.classList.add("project-active");
