@@ -1,6 +1,6 @@
 @import "~bootstrap/scss/bootstrap";
-@import "media-queries";
 @import "variables";
+@import "media-queries";
 @import "utilities";
 @import "fonts";
 @import "sections";
@@ -26,7 +26,7 @@ body {
   font-size: 1.5rem;
   line-height: 1.7em;
   color: $dark-grey;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 * {

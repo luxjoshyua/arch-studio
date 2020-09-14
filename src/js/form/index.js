@@ -17,10 +17,15 @@ if (form !== null) {
       if (element.value.length > 0) {
         element.nextElementSibling.style.display = "none";
         element.classList.remove("form-error");
-        submitBtn.disabled = true;
+        // submitBtn.disabled = true;
       }
     }
   };
+
+  submitBtn.addEventListener("click", (e) => {
+    console.log(e);
+    // e.preventDefault();
+  });
 
   // if keydown on form, run the checkForm function
   form.addEventListener("keydown", (e) => {

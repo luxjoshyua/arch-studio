@@ -3,11 +3,21 @@
   margin: 0 auto;
   position: relative;
   padding-bottom: 56px;
+  @include breakpoint(tablet) {
+    padding: 0 20px 56px;
+    justify-content: center !important;
+  }
   .page-indicator {
     position: absolute;
     top: 120px;
     left: -25%;
     transform: rotate(90deg);
+    @include breakpoint(desk-xl) {
+      left: -20%;
+    }
+    @include breakpoint(tablet) {
+      left: -15%;
+    }
     .line {
       width: 104px;
       height: 1px;
@@ -40,6 +50,7 @@
             a {
               color: $medium-grey;
               text-align: left;
+              font-weight: 600;
             }
           }
         }

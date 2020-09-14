@@ -9,18 +9,31 @@
       background-size: cover;
       position: relative;
       display: none;
-      .col-5 {
-        margin-left: 190px;
-        .copy-outer {
-          height: 100%;
-          width: 100%;
-          .heading-medium {
-            color: $white;
-            padding-bottom: 20px;
+      @include breakpoint(tablet) {
+        max-width: 570px;
+      }
+      .cols {
+        @include breakpoint(tablet) {
+          align-items: flex-start !important;
+          justify-content: center;
+        }
+        .col-5 {
+          margin-left: 190px;
+          @include breakpoint(tablet) {
+            margin-left: 0;
+            min-width: 457px;
           }
-          .copy {
-            padding-bottom: 70px;
-            color: $white;
+          .copy-outer {
+            height: 100%;
+            width: 100%;
+            .heading-medium {
+              color: $white;
+              padding-bottom: 20px;
+            }
+            .copy {
+              padding-bottom: 70px;
+              color: $white;
+            }
           }
         }
       }
@@ -42,6 +55,10 @@
       position: absolute;
       bottom: 0;
       left: -80px;
+      @include breakpoint(tablet) {
+        left: 20px;
+      }
+
       .nav-item {
         border: 1px solid $grey;
         width: 80px;

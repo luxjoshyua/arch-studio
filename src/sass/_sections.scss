@@ -3,6 +3,10 @@
     .cols {
       max-width: 100%;
       .col-10 {
+        @include breakpoint(tablet) {
+          padding-bottom: 20px;
+        }
+
         .heading-large {
           z-index: 1;
         }
@@ -10,6 +14,11 @@
       .col-5 {
         margin-left: 200px;
         max-width: 446px;
+        @include breakpoint(tablet) {
+          margin-left: 0;
+          min-width: 100%;
+        }
+
         .heading-small {
           padding-bottom: 50px;
         }
@@ -43,8 +52,17 @@
       opacity: 0.5;
     }
     .cols {
+      @include breakpoint(tablet) {
+        align-items: center;
+      }
+
       .col-4 {
         margin-left: 190px;
+        @include breakpoint(tablet) {
+          margin-left: 0;
+          min-width: 445px;
+        }
+
         .heading-small {
           color: $white;
           margin-bottom: 34px;
@@ -56,6 +74,16 @@
 
 .chapter3 {
   .inner {
+    .cols {
+      @include breakpoint(tablet) {
+        flex-direction: row !important;
+      }
+      &:nth-of-type(2) {
+        @include breakpoint(tablet) {
+          flex-direction: column !important;
+        }
+      }
+    }
     .heading-outer {
       margin-bottom: 64px;
     }

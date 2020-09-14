@@ -1,42 +1,56 @@
-// Small tablets and large smartphones (landscape view)
-$screen-mobile: 600px;
+$mob-sm: 320px;
+$mob-an: 360px;
+$mob-md: 375px;
+$mob-lg: 700px;
+$tablet: 1199px;
+$desk-sm: 1279px;
+$desk-md: 1365px;
+$desk-lg: 1439px;
+$desk-xl: 1919px;
+$desk-xxl: 1920px;
 
-// Tablets and small desktops
-$screen-med: 1200px;
-
-// Large screens
-$screen-large: 1600px;
-
-// XL screens
-// $screen-xl: 2000px;
-
-
-
-
-// Small devices - <= 600px
-@mixin sm {
-  @media (max-width: #{$screen-mobile}) {
-    @content;
+@mixin breakpoint($class) {
+  @if $class == mob-sm {
+    @media (max-width: $mob-sm) {
+      @content;
+    }
+  } @else if $class == mob-an {
+    @media (max-width: $mob-an) {
+      @content;
+    }
+  } @else if $class == mob-md {
+    @media (max-width: $mob-md) {
+      @content;
+    }
+  } @else if $class == mob-lg {
+    @media (max-width: $mob-lg) {
+      @content;
+    }
+  } @else if $class == tablet {
+    @media (max-width: $tablet) {
+      @content;
+    }
+  } @else if $class == desk-sm {
+    @media (max-width: $desk-sm) {
+      @content;
+    }
+  } @else if $class == desk-md {
+    @media (max-width: $desk-md) {
+      @content;
+    }
+  } @else if $class == desk-lg {
+    @media (max-width: $desk-lg) {
+      @content;
+    }
+  } @else if $class == desk-xl {
+    @media (max-width: $desk-xl) {
+      @content;
+    }
+  } @else if $class == desk-xxl {
+    @media (max-width: $desk-xxl) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint mixin supports: mob-xx, tablet, desk-xx";
   }
 }
-
-// Medium devices - <= 1200px
-@mixin md {
-  @media (max-width: #{$screen-med}) {
-    @content;
-  }
-}
-
-// Large devices - <= 1600px
-@mixin lg {
-  @media (max-width: #{$screen-large}) {
-    @content;
-  }
-}
-
-// // Large devices - <= 2000px
-// @mixin xl {
-//   @media (min-width: #{$screen-xl}) {
-//     @content;
-//   }
-// }
