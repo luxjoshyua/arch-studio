@@ -1,3 +1,43 @@
+.header-mobile {
+  .inner {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between !important;
+    flex-direction: row !important;
+    .logo-outer {
+      img {
+        max-width: 77px;
+      }
+    }
+
+    .hamburger-icon {
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+  .links {
+    position: absolute;
+    right: 0;
+    top: 71px;
+    width: 343px;
+    background-color: $very-light-grey;
+    z-index: 2;
+    padding: 48px;
+    display: none;
+    ul {
+      list-style-type: none;
+      li {
+        font-size: 1.8rem;
+        line-height: 1.4em;
+        font-weight: 700;
+        color: $black;
+        padding-bottom: 32px;
+      }
+    }
+  }
+}
+
 .header {
   max-width: $max-page-width;
   margin: 0 auto;
@@ -6,6 +46,9 @@
   @include breakpoint(tablet) {
     padding: 0 20px 56px;
     justify-content: center !important;
+  }
+  @include breakpoint(mob-lg) {
+    display: none !important;
   }
   &.header-portfolio {
     .page-indicator {
@@ -91,6 +134,9 @@
         max-width: 630px;
         margin: 0;
       }
+      @include breakpoint(mob-lg) {
+        min-height: 400px;
+      }
 
       .logo-box {
         top: 0;
@@ -102,6 +148,10 @@
         @include breakpoint(tablet) {
           width: 120px;
           height: 120px;
+        }
+        @include breakpoint(mob-lg) {
+          top: -40px;
+          left: 35%;
         }
         img {
           @include absoluteCenter;
@@ -118,16 +168,36 @@
             justify-content: flex-start;
             padding-left: 150px;
           }
+          @include breakpoint(mob-lg) {
+            padding-left: 0;
+            justify-content: center;
+            flex-direction: column !important;
+          }
           .link {
             padding-right: 52px;
             @include breakpoint(tablet) {
               padding-right: 40px;
+            }
+            @include breakpoint(mob-lg) {
+              padding-right: 0;
+              padding-bottom: 20px;
             }
           }
         }
       }
       .btn-outer {
         right: -120px;
+        @include breakpoint(mob-lg) {
+          right: 5%;
+          bottom: 0;
+          width: 100%;
+          max-width: 335px;
+        }
+        .btn {
+          @include breakpoint(mob-lg) {
+            min-width: 100%;
+          }
+        }
       }
     }
   }
