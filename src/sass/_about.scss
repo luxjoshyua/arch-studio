@@ -18,14 +18,30 @@
       width: 740px;
       right: -120px;
       top: 230px;
+      @include breakpoint(tablet) {
+        height: 431px;
+        width: 572px;
+        top: initial;
+        bottom: 0;
+        right: 0;
+      }
       .heading-large {
         position: relative;
         top: -80px;
         left: -60px;
+        @include breakpoint(tablet) {
+          top: -70px;
+          left: initial;
+          right: -80px;
+        }
       }
       .copy {
         max-width: 446px;
         margin-left: 182px;
+        @include breakpoint(tablet) {
+          margin-left: 32px;
+        }
+
         &.chapter-divider {
           &::before {
             top: -60px;
@@ -33,6 +49,9 @@
         }
         .heading-small {
           padding-bottom: 50px;
+          @include breakpoint(tablet) {
+            padding-bottom: 30px;
+          }
         }
       }
     }
@@ -43,12 +62,28 @@
   .inner {
     .img-outer {
       background-image: url("../assets/images/about/desktop/image-hero-about.jpg");
+      @include breakpoint(tablet) {
+        background-image: url("../assets/images/about/tablet/image-hero-about-tablet.jpg");
+        background-size: cover;
+        width: 620px;
+        left: 60px;
+      }
     }
   }
 }
 
 .chapter-heritage {
   .inner {
+    @include breakpoint(tablet) {
+      flex-direction: column-reverse;
+    }
+    &.chapter-divider {
+      &::before {
+        @include breakpoint(tablet) {
+          left: 60px;
+        }
+      }
+    }
     .img-outer {
       background: url("../assets/images/about/desktop/image-heritage.jpg")
         no-repeat center center;
@@ -57,11 +92,20 @@
       position: absolute;
       top: 0;
       right: 0;
+      @include breakpoint(tablet) {
+        position: relative;
+        width: 100%;
+        background-size: cover;
+      }
     }
     .cols {
       .col-5 {
         padding-top: 120px;
         padding-right: 10px;
+        @include breakpoint(tablet) {
+          min-width: 100%;
+          padding: 120px 20px 40px;
+        }
         .heading-small {
           padding-bottom: 50px;
         }
@@ -73,13 +117,26 @@
 .chapter-leaders {
   .cols {
     .col-3 {
+      .heading-small {
+        @include breakpoint(tablet) {
+          padding-bottom: 50px;
+        }
+      }
     }
     .leaders-outer {
       flex-flow: wrap;
       padding-left: 20px;
+      @include breakpoint(tablet) {
+        padding-left: 0;
+        min-width: 100%;
+      }
+
       .leaders-item {
         padding-bottom: 34px;
         position: relative;
+        @include breakpoint(tablet) {
+          padding-bottom: 64px;
+        }
 
         &:hover {
           .social-icons-outer {
@@ -117,9 +174,19 @@
             display: flex;
             align-items: center;
             opacity: 0;
+            @include breakpoint(tablet) {
+              opacity: 1;
+              top: 145%;
+              left: 50px;
+            }
             .social-icon {
               &:first-of-type {
                 margin-right: 20px;
+              }
+              img {
+                @include breakpoint(tablet) {
+                  max-width: 80%;
+                }
               }
             }
           }

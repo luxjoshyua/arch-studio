@@ -7,6 +7,13 @@
     padding: 0 20px 56px;
     justify-content: center !important;
   }
+  &.header-portfolio {
+    .page-indicator {
+      @include breakpoint(tablet) {
+        left: -20%;
+      }
+    }
+  }
   .page-indicator {
     position: absolute;
     top: 120px;
@@ -61,11 +68,30 @@
 
 .footer {
   padding-right: 110px;
+  @include breakpoint(tablet) {
+    padding-right: 0;
+  }
+  .cols {
+    @include breakpoint(tablet) {
+      padding: 0;
+    }
+    .col-9 {
+      @include breakpoint(tablet) {
+        min-width: 100%;
+      }
+    }
+  }
   footer {
     .inner {
       background: $very-light-grey 0% 0% no-repeat padding-box;
       max-width: 984px;
       min-height: 200px;
+      @include breakpoint(tablet) {
+        min-height: 120px;
+        max-width: 630px;
+        margin: 0;
+      }
+
       .logo-box {
         top: 0;
         left: 0;
@@ -73,14 +99,30 @@
         height: 200px;
         background-color: $black;
         z-index: 1;
+        @include breakpoint(tablet) {
+          width: 120px;
+          height: 120px;
+        }
         img {
           @include absoluteCenter;
+          @include breakpoint(tablet) {
+            transform: scale(0.8);
+            top: 35%;
+            left: 10%;
+          }
         }
       }
       .footer-links {
         .inner {
+          @include breakpoint(tablet) {
+            justify-content: flex-start;
+            padding-left: 150px;
+          }
           .link {
             padding-right: 52px;
+            @include breakpoint(tablet) {
+              padding-right: 40px;
+            }
           }
         }
       }

@@ -40,15 +40,27 @@
 
       &-one {
         background-image: url("../assets/images/home/desktop/image-hero-paramour.jpg");
+        @include breakpoint(tablet) {
+          background-image: url("../assets/images/home/tablet/image-hero-paramour.jpg");
+        }
       }
       &-two {
         background-image: url("../assets/images/home/desktop/image-hero-seraph.jpg");
+        @include breakpoint(tablet) {
+          background-image: url("../assets/images/home/tablet/image-hero-seraph.jpg");
+        }
       }
       &-three {
         background-image: url("../assets/images/home/desktop/image-hero-federal.jpg");
+        @include breakpoint(tablet) {
+          background-image: url("../assets/images/home/tablet/image-hero-federal.jpg");
+        }
       }
       &-four {
         background-image: url("../assets/images/home/desktop/image-hero-trinity.jpg");
+        @include breakpoint(tablet) {
+          background-image: url("../assets/images/home/tablet/image-hero-trinity.jpg");
+        }
       }
     }
     .project-navigation {

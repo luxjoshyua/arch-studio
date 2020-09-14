@@ -83,6 +83,11 @@
           flex-direction: column !important;
         }
       }
+      .col-4 {
+        @include breakpoint(tablet) {
+          min-width: 100%;
+        }
+      }
     }
     .heading-outer {
       margin-bottom: 64px;
@@ -94,6 +99,12 @@
         margin-right: 20px;
         min-height: 560px;
         max-width: 350px;
+        @include breakpoint(tablet) {
+          min-height: 268px;
+          margin-right: 0;
+          margin-bottom: 30px;
+        }
+
         &::before {
           content: "";
           display: block;
@@ -108,13 +119,22 @@
         }
         &-1 {
           background-image: url("../assets/images/portfolio/desktop/image-del-sol.jpg");
+          @include breakpoint(tablet) {
+            background-image: url("../assets/images/portfolio/tablet/image-del-sol.jpg");
+          }
         }
         &-2 {
           background-image: url("../assets/images/portfolio/desktop/image-228b.jpg");
+          @include breakpoint(tablet) {
+            background-image: url("../assets/images/portfolio/tablet/image-228b.jpg");
+          }
         }
         &-3 {
           background-image: url("../assets/images/portfolio/desktop/image-prototype.jpg");
           margin-right: 0;
+          @include breakpoint(tablet) {
+            background-image: url("../assets/images/portfolio/tablet/image-prototype.jpg");
+          }
         }
 
         .content-outer {
@@ -125,6 +145,10 @@
           .copy-outer {
             padding-top: 240px;
             padding-left: 20px;
+            @include breakpoint(tablet) {
+              padding-top: 60px;
+            }
+
             .project {
               font-size: 1.8rem;
               line-height: 1.4em;
