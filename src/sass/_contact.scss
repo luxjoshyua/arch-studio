@@ -103,6 +103,9 @@
 }
 
 .contact-form {
+  @include breakpoint(mob-lg) {
+    margin-bottom: 120px;
+  }
   .inner {
     .cols {
       @include breakpoint(tablet) {
@@ -115,6 +118,12 @@
           min-width: 100%;
           text-align: center;
           padding-bottom: 30px;
+        }
+        .heading-small {
+          @include breakpoint(mob-lg) {
+            text-align: left;
+            max-width: 260px;
+          }
         }
       }
       .col-8 {

@@ -35,8 +35,12 @@
         position: relative;
       }
       @include breakpoint(mob-lg) {
-        max-width: 100%;
-        right: 0;
+        max-width: 80%;
+        right: auto;
+        padding: 20px;
+        left: -40px;
+        width: 100%;
+        top: -40px;
       }
       .heading-large {
         position: relative;
@@ -56,6 +60,7 @@
         }
         @include breakpoint(mob-lg) {
           margin-left: 0;
+          margin-top: 60px;
         }
         &.chapter-divider {
           &::before {
@@ -74,6 +79,9 @@
 }
 
 .hero-about {
+  @include breakpoint(mob-lg) {
+    margin-top: 0;
+  }
   .inner {
     .img-outer {
       background-image: url("../assets/images/about/desktop/image-hero-about.jpg");
@@ -105,7 +113,7 @@
           left: 60px;
         }
         @include breakpoint(mob-lg) {
-          left: 20px;
+          left: 0;
           top: 30px;
         }
       }
@@ -122,6 +130,9 @@
         position: relative;
         width: 100%;
         background-size: cover;
+      }
+      @include breakpoint(mob-lg) {
+        min-height: 300px;
       }
     }
     .cols {

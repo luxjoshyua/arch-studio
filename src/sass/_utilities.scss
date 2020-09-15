@@ -284,5 +284,8 @@
     position: absolute;
     top: 0;
     left: 0;
+    @include breakpoint(mob-lg) {
+      width: 100%;
+    }
   }
 }
