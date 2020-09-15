@@ -192,6 +192,7 @@
           bottom: 0;
           width: 100%;
           max-width: 335px;
+          padding-bottom: 20px;
         }
         .btn {
           @include breakpoint(mob-lg) {

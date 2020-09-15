@@ -1,5 +1,8 @@
 .portfolio {
   margin-bottom: 160px;
+  @include breakpoint(mob-lg) {
+    margin-top: 60px;
+  }
   .inner {
     max-width: $max-page-width;
     .cols {
@@ -7,7 +10,9 @@
       @include breakpoint(tablet) {
         align-items: center;
       }
-
+      @include breakpoint(mob-lg) {
+        padding: 0 20px;
+      }
       .portfolio-item {
         background-repeat: no-repeat;
         background-size: cover;
@@ -35,9 +40,15 @@
           @include breakpoint(tablet) {
             top: 55%;
           }
+          @include breakpoint(mob-lg) {
+            left: 0;
+          }
           .project {
             @include breakpoint(tablet) {
               padding-bottom: 10px;
+            }
+            @include breakpoint(mob-lg) {
+              padding: initial;
             }
           }
           .project,
@@ -53,17 +64,26 @@
           @include breakpoint(tablet) {
             background-image: url("../assets/images/portfolio/tablet/image-seraph.jpg");
           }
+          @include breakpoint(mob-lg) {
+            background-image: url("../assets/images/portfolio/mobile/image-seraph.jpg");
+          }
         }
         &-two {
           background-image: url("../assets/images/portfolio/desktop/image-eebox.jpg");
           @include breakpoint(tablet) {
             background-image: url("../assets/images/portfolio/tablet/image-eebox.jpg");
           }
+          @include breakpoint(mob-lg) {
+            background-image: url("../assets/images/portfolio/mobile/image-eebox.jpg");
+          }
         }
         &-three {
           background-image: url("../assets/images/portfolio/desktop/image-federal.jpg");
           @include breakpoint(tablet) {
             background-image: url("../assets/images/portfolio/tablet/image-federal.jpg");
+          }
+          @include breakpoint(mob-lg) {
+            background-image: url("../assets/images/portfolio/mobile/image-federal.jpg");
           }
         }
         &-four {
@@ -77,6 +97,9 @@
           @include breakpoint(tablet) {
             background-image: url("../assets/images/portfolio/tablet/image-prototype.jpg");
           }
+          @include breakpoint(mob-lg) {
+            background-image: url("../assets/images/portfolio/mobile/image-prototype.jpg");
+          }
         }
         &-six {
           background-image: url("../assets/images/portfolio/desktop/image-228b.jpg");
@@ -89,11 +112,17 @@
           @include breakpoint(tablet) {
             background-image: url("../assets/images/portfolio/tablet/image-edelweiss.jpg");
           }
+          @include breakpoint(mob-lg) {
+            background-image: url("../assets/images/portfolio/mobile/image-edelweiss.jpg");
+          }
         }
         &-eight {
           background-image: url("../assets/images/portfolio/desktop/image-netcry.jpg");
           @include breakpoint(tablet) {
             background-image: url("../assets/images/portfolio/tablet/image-netcry.jpg");
+          }
+          @include breakpoint(mob-lg) {
+            background-image: url("../assets/images/portfolio/mobile/image-netcry.jpg");
           }
         }
         &-nine {
@@ -101,11 +130,17 @@
           @include breakpoint(tablet) {
             background-image: url("../assets/images/portfolio/tablet/image-hypers.jpg");
           }
+          @include breakpoint(mob-lg) {
+            background-image: url("../assets/images/portfolio/mobile/image-hypers.jpg");
+          }
         }
         &-ten {
           background-image: url("../assets/images/portfolio/desktop/image-sxiv.jpg");
           @include breakpoint(tablet) {
             background-image: url("../assets/images/portfolio/tablet/image-sxiv.jpg");
+          }
+          @include breakpoint(mob-lg) {
+            background-image: url("../assets/images/portfolio/mobile/image-sxiv.jpg");
           }
         }
         &-eleven {
@@ -113,11 +148,17 @@
           @include breakpoint(tablet) {
             background-image: url("../assets/images/portfolio/tablet/image-trinity.jpg");
           }
+          @include breakpoint(mob-lg) {
+            background-image: url("../assets/images/portfolio/mobile/image-trinity.jpg");
+          }
         }
         &-twelve {
           background-image: url("../assets/images/portfolio/desktop/image-paramour.jpg");
           @include breakpoint(tablet) {
             background-image: url("../assets/images/portfolio/tablet/image-paramour.jpg");
+          }
+          @include breakpoint(mob-lg) {
+            background-image: url("../assets/images/portfolio/mobile/image-paramour.jpg");
           }
         }
       }

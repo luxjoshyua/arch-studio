@@ -1,6 +1,9 @@
 .hero-child-page {
   .inner {
     min-height: 720px;
+    @include breakpoint(mob-lg) {
+      min-height: 100%;
+    }
     .img-outer {
       background-repeat: no-repeat;
       background-position: center center;
@@ -10,6 +13,9 @@
       position: absolute;
       top: 0;
       left: 0;
+      @include breakpoint(mob-lg) {
+        position: relative;
+      }
     }
     .copy-outer {
       position: absolute;
@@ -21,8 +27,15 @@
       @include breakpoint(tablet) {
         height: 431px;
         width: 572px;
-        top: initial;
         bottom: 0;
+        right: 0;
+        padding: 0 20px;
+        height: auto;
+        top: 60px;
+        position: relative;
+      }
+      @include breakpoint(mob-lg) {
+        max-width: 100%;
         right: 0;
       }
       .heading-large {
@@ -41,7 +54,9 @@
         @include breakpoint(tablet) {
           margin-left: 32px;
         }
-
+        @include breakpoint(mob-lg) {
+          margin-left: 0;
+        }
         &.chapter-divider {
           &::before {
             top: -60px;
@@ -68,6 +83,13 @@
         width: 620px;
         left: 60px;
       }
+      @include breakpoint(mob-lg) {
+        background-image: url("../assets/images/about/mobile/image-hero-about-mb.jpg");
+        width: 100%;
+        left: 0;
+        background-size: contain;
+        min-height: 240px;
+      }
     }
   }
 }
@@ -81,6 +103,10 @@
       &::before {
         @include breakpoint(tablet) {
           left: 60px;
+        }
+        @include breakpoint(mob-lg) {
+          left: 20px;
+          top: 30px;
         }
       }
     }
@@ -106,6 +132,9 @@
           min-width: 100%;
           padding: 120px 20px 40px;
         }
+        @include breakpoint(mob-lg) {
+          padding: 60px 0 0;
+        }
         .heading-small {
           padding-bottom: 50px;
         }
@@ -117,6 +146,9 @@
 .chapter-leaders {
   .cols {
     .col-3 {
+      @include breakpoint(mob-lg) {
+        max-width: 100% !important;
+      }
       .heading-small {
         @include breakpoint(tablet) {
           padding-bottom: 50px;
@@ -130,14 +162,18 @@
         padding-left: 0;
         min-width: 100%;
       }
-
+      @include breakpoint(mob-lg) {
+        flex-direction: column;
+      }
       .leaders-item {
         padding-bottom: 34px;
         position: relative;
         @include breakpoint(tablet) {
           padding-bottom: 64px;
         }
-
+        @include breakpoint(mob-lg) {
+          min-width: 100%;
+        }
         &:hover {
           .social-icons-outer {
             opacity: 1 !important;
@@ -177,15 +213,24 @@
             @include breakpoint(tablet) {
               opacity: 1;
               top: 145%;
-              left: 50px;
+              left: 40px;
+            }
+            @include breakpoint(mob-lg) {
+              top: 135%;
             }
             .social-icon {
               &:first-of-type {
                 margin-right: 20px;
+                @include breakpoint(mob-lg) {
+                  margin-right: 0;
+                }
               }
               img {
                 @include breakpoint(tablet) {
                   max-width: 80%;
+                }
+                @include breakpoint(mob-lg) {
+                  max-width: 30px;
                 }
               }
             }

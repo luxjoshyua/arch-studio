@@ -1,4 +1,7 @@
 .hero-contact {
+  @include breakpoint(mob-lg) {
+    margin-bottom: 120px;
+  }
   .inner {
     .img-outer {
       background: url("../assets/images/contact/desktop/image-hero-contact.jpg");
@@ -7,6 +10,13 @@
         background-image: url("../assets/images/contact/tablet/image-hero-tablet.jpg");
         width: 620px;
         left: 60px;
+      }
+      @include breakpoint(mob-lg) {
+        background-image: url("../assets/images/contact/mobile/image-hero-about-mobile.jpg");
+        width: 100%;
+        left: 0;
+        background-size: contain;
+        min-height: 240px;
       }
     }
     .copy-outer {
@@ -41,6 +51,9 @@
           text-align: center;
           padding-bottom: 30px;
         }
+        @include breakpoint(mob-lg) {
+          text-align: left;
+        }
         .location {
           font-weight: 700;
           padding-bottom: 26px;
@@ -63,6 +76,9 @@
           max-width: fit-content;
           @include breakpoint(tablet) {
             margin: 0 auto;
+          }
+          @include breakpoint(mob-lg) {
+            margin: 0;
           }
           &::after {
             content: "";
