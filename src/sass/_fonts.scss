@@ -9,6 +9,9 @@
   @include breakpoint(tablet) {
     font-size: 12rem;
   }
+  @include breakpoint(mob-lg) {
+    font-size: 8rem;
+  }
 }
 
 .heading-medium {

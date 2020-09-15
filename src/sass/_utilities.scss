@@ -50,7 +50,7 @@
   min-height: 72px;
   position: relative;
   @include breakpoint(mob-lg) {
-    padding-top: 20px;
+    @include centreContent();
     width: 100%;
   }
   &::after {
@@ -285,7 +285,8 @@
     top: 0;
     left: 0;
     @include breakpoint(mob-lg) {
-      width: 100%;
+      // width: 100%;
+      top: -50px;
     }
   }
 }
