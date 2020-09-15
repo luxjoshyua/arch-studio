@@ -21,13 +21,10 @@ if (navBtns[0]) {
 navBtns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     let target = e.target.innerHTML;
-    console.log(e);
-    console.log(btn);
-
+    document.querySelector(".active")
+      ? document.querySelector(".active").classList.remove("active")
+      : "";
     btn.classList.add("active");
-
-    btn.previousElementSibling.classList.remove("active");
-    btn.nextElementSibling.classList.remove("active");
 
     projects.forEach((project) => {
       project.classList.remove("project-active");
