@@ -13,12 +13,21 @@ if (navBtns[0]) {
   navBtns[0].classList.toggle("active");
 }
 
+/**
+ * every button we click we add a class
+ * but how to remove the class from the previously clicked button
+ */
+
 navBtns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     let target = e.target.innerHTML;
+    console.log(e);
+    console.log(btn);
 
     btn.classList.add("active");
-    // btn.previousElementSibling.classList.remove("active");
+
+    btn.previousElementSibling.classList.remove("active");
+    btn.nextElementSibling.classList.remove("active");
 
     projects.forEach((project) => {
       project.classList.remove("project-active");

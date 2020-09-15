@@ -32,9 +32,15 @@
 
 .contact-details {
   .inner {
+    @include breakpoint(mob-lg) {
+      padding: 0;
+    }
     .cols {
       @include breakpoint(tablet) {
         align-items: center;
+      }
+      @include breakpoint(mob-lg) {
+        padding: 0 20px;
       }
       .col-3 {
         margin-right: 104px;

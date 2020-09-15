@@ -3,6 +3,7 @@
     min-height: 720px;
     @include breakpoint(mob-lg) {
       min-height: 100%;
+      align-items: flex-start;
     }
     .img-outer {
       background-repeat: no-repeat;
@@ -35,12 +36,11 @@
         position: relative;
       }
       @include breakpoint(mob-lg) {
-        max-width: 80%;
         right: auto;
         padding: 20px;
-        left: -40px;
-        width: 100%;
+        width: 90%;
         top: -40px;
+        margin: 0;
       }
       .heading-large {
         position: relative;
@@ -60,16 +60,23 @@
         }
         @include breakpoint(mob-lg) {
           margin-left: 0;
-          margin-top: 60px;
+          margin-top: 20px;
         }
         &.chapter-divider {
           &::before {
             top: -60px;
+            @include breakpoint(mob-lg) {
+              top: -20px;
+              width: 114%;
+              padding: 0;
+              left: -20px;
+            }
           }
         }
         .heading-small {
           padding-bottom: 50px;
           @include breakpoint(tablet) {
+            padding-top: 20px;
             padding-bottom: 30px;
           }
         }
@@ -81,6 +88,7 @@
 .hero-about {
   @include breakpoint(mob-lg) {
     margin-top: 0;
+    margin-bottom: 0;
   }
   .inner {
     .img-outer {
@@ -224,7 +232,7 @@
             @include breakpoint(tablet) {
               opacity: 1;
               top: 145%;
-              left: 40px;
+              left: 32px;
             }
             @include breakpoint(mob-lg) {
               top: 135%;

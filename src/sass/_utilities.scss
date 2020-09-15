@@ -46,8 +46,7 @@
 
 .btn {
   background: $black 0% 0% no-repeat padding-box;
-  padding: 0;
-  min-height: 72px;
+  padding: 20px 60px;
   position: relative;
   @include breakpoint(mob-lg) {
     @include centreContent();
@@ -62,29 +61,21 @@
     height: 20px;
     position: absolute;
     right: 10px;
-    top: 25px;
+    top: 20px;
     @include breakpoint(mob-lg) {
-      top: 30px;
+      top: 20px;
     }
   }
   span {
     text-align: right;
     color: $white;
-    padding: 20px 60px 20px 40px;
-    line-height: 4em;
     font-weight: 700;
     font-size: 1.5rem;
-    line-height: 3em;
-    position: relative;
-    top: 11px;
-    @include breakpoint(tablet) {
-      padding: 20px 50px 20px 20px;
-    }
+    line-height: 1.5em;
     @include breakpoint(mob-lg) {
       font-size: 1.4rem;
-      line-height: 2em;
+      line-height: 1.4em;
       padding: 0;
-      top: 7px;
     }
   }
   &:hover {
