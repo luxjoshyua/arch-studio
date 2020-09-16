@@ -14,6 +14,11 @@
       position: absolute;
       top: 0;
       left: 0;
+      @include breakpoint(tablet) {
+        width: 100%;
+        left: 80px;
+        max-width: 570px;
+      }
       @include breakpoint(mob-lg) {
         position: relative;
       }
@@ -26,13 +31,12 @@
       right: -120px;
       top: 230px;
       @include breakpoint(tablet) {
-        height: 431px;
         width: 572px;
         bottom: 0;
-        right: 0;
-        padding: 0 20px;
+        right: -10px;
+        padding: 0 0 120px;
         height: auto;
-        top: 60px;
+        top: 200px;
         position: relative;
       }
       @include breakpoint(mob-lg) {
@@ -232,10 +236,11 @@
             @include breakpoint(tablet) {
               opacity: 1;
               top: 145%;
-              left: 32px;
+              left: 52px;
             }
             @include breakpoint(mob-lg) {
               top: 135%;
+              left: 32px;
             }
             .social-icon {
               &:first-of-type {

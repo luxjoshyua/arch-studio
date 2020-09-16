@@ -14,6 +14,7 @@
 }
 
 .chapter {
+  position: relative;
   .inner {
     position: relative;
     @include centreContent();
@@ -167,7 +168,6 @@
   display: flex;
   flex-direction: row !important;
   align-items: flex-start;
-
   @include breakpoint(desk-sm) {
     width: 100% !important;
     padding: 0 50px;
@@ -244,9 +244,6 @@
   @include breakpoint(desk-sm) {
     margin-left: 0;
   }
-}
-.chapter {
-  position: relative;
 }
 
 .bg-dark {

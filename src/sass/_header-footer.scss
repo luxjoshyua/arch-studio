@@ -38,6 +38,35 @@
   }
 }
 
+.page-indicator {
+  position: absolute;
+  top: 100px;
+  left: -100px;
+  transform: rotate(90deg);
+
+  // @include breakpoint(tablet) {
+  //   left: -15%;
+  // }
+  @include breakpoint(mob-lg) {
+    display: none !important;
+  }
+  .line {
+    width: 104px;
+    height: 1px;
+    background-color: $light-grey;
+    display: inline-block;
+    position: relative;
+    top: 10px;
+  }
+  .copy {
+    text-transform: uppercase;
+    color: $light-grey;
+    text-align: left;
+    letter-spacing: 15px;
+    padding-left: 60px;
+  }
+}
+
 .header {
   max-width: $max-page-width;
   margin: 0 auto;
@@ -50,40 +79,7 @@
   @include breakpoint(mob-lg) {
     display: none !important;
   }
-  &.header-portfolio {
-    .page-indicator {
-      @include breakpoint(tablet) {
-        left: -20%;
-      }
-    }
-  }
-  .page-indicator {
-    position: absolute;
-    top: 120px;
-    left: -25%;
-    transform: rotate(90deg);
-    @include breakpoint(desk-xl) {
-      left: -20%;
-    }
-    @include breakpoint(tablet) {
-      left: -15%;
-    }
-    .line {
-      width: 104px;
-      height: 1px;
-      background-color: $light-grey;
-      display: inline-block;
-      position: relative;
-      top: 10px;
-    }
-    .copy {
-      text-transform: uppercase;
-      color: $light-grey;
-      text-align: left;
-      letter-spacing: 15px;
-      padding-left: 60px;
-    }
-  }
+
   nav {
     .inner {
       max-width: 620px;

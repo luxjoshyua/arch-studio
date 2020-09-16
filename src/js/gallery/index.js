@@ -13,11 +13,6 @@ if (navBtns[0]) {
   navBtns[0].classList.toggle("active");
 }
 
-/**
- * every button we click we add a class
- * but how to remove the class from the previously clicked button
- */
-
 navBtns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     let target = e.target.innerHTML;
